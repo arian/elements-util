@@ -1,0 +1,9 @@
+{
+  "asi": true,
+  "node": true,
+  "browser": true,
+  "predef": {
+    "describe": true,
+    "it": true
+  }
+}

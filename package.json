@@ -1,0 +1,23 @@
+{
+  "name": "elements-util",
+  "version": "0.0.0",
+  "description": "Extra Utilities using Elements",
+  "scripts": {
+    "test": "make test"
+  },
+  "author": "Arian Stolwijk",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/arian/elements-util.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "prime": "*",
+    "elements": "0.0.7-alpha"
+  },
+  "devDependencies": {
+    "mocha": "1.3",
+    "expect.js": "0.1",
+    "jshint": "0.9"
+  }
+}
