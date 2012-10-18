@@ -1,0 +1,44 @@
+"use strict";
+
+var expect = require('expect.js')
+var $ = require('elements')
+var ready = require('elements/lib/domready')
+var event = require('../lib/event')
+
+ready(function(){
+
+    // eventCasper.js will click those elements. Casperjs will also listen
+    // for error events, which the expect() calls will throw, if something
+    // is wrong.
+
+    var test = $(document.getElementById('test'))
+
+    test.on('click', function(e){
+        e = event(e)
+        e.preventDefault()
+        expect(e.type()).to.be('click')
+        expect(e.target() == test).to.be.ok()
+        expect(location.hash).not.to.be('#foo')
+    })
+
+    var wrap = $(document.getElementById('wrap'))
+    var target = $(document.getElementById('test-target'))
+
+    wrap.on('click', function(e){
+        e = event(e)
+        expect(e.target() == target).to.be.ok()
+    })
+
+    var prop = $(document.getElementById('propagation'))
+    var testPropagation = $(document.getElementById('test-propagation'))
+
+    prop.on('click', function(){
+        expect('can not click here').not.to.be.ok()
+    })
+
+    testPropagation.on('click', function(e){
+        event(e).stopPropagation()
+    })
+
+})
+

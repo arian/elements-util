@@ -1,11 +1,11 @@
 
 lint:
-	@./node_modules/.bin/jshint \
-		./test ./event ./insertion
+	./node_modules/.bin/jshint ./lib ./test
+
+test-server:
+	node ./test/server.js
 
 test: lint
-#	@./node_modules/.bin/mocha --reporter spec \
-#		test/types/* \
-#		test/prime/*
+	casperjs ./test/eventCasper.js
 
 .PHONY: test
