@@ -5,6 +5,9 @@ var $ = require('elements')
 var ready = require('elements/lib/domready')
 var event = require('../lib/event')
 
+var mouse = require('../lib/event/mouse')
+var key = require('../lib/event/key')
+
 ready(function(){
 
     // eventCasper.js will click those elements. Casperjs will also listen
@@ -19,6 +22,17 @@ ready(function(){
         expect(e.type()).to.be('click')
         expect(e.target() == test).to.be.ok()
         expect(location.hash).not.to.be('#foo')
+
+        // mouse should accept another wrapped event
+        var m = mouse(e)
+        var page = m.page()
+        var client = m.client()
+
+        expect(page.x).to.be.ok()
+        expect(page.y).to.be.ok()
+        expect(client.x).to.be.ok()
+        expect(client.y).to.be.ok()
+
     })
 
     var wrap = $(document.getElementById('wrap'))
@@ -39,6 +53,8 @@ ready(function(){
     testPropagation.on('click', function(e){
         event(e).stopPropagation()
     })
+
+
 
 })
 
