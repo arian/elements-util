@@ -1,6 +1,6 @@
 {
   "name": "elements-util",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Extra Utilities using Elements",
   "scripts": {
     "test": "make test"
