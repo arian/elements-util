@@ -3,6 +3,8 @@ elements-util
 
 Utilities for elements
 
+[![Build Status](https://secure.travis-ci.org/arian/elements-util.png)](http://travis-ci.org/arian/elements-util)
+
 ## event
 
 An event wrapper to get better and easier information about the passed event.
