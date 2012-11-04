@@ -7,5 +7,6 @@ test-server:
 
 test: lint
 	casperjs ./test/eventCasper.js
+	casperjs ./test/casper.js http://localhost:8080/behavior.html
 
 .PHONY: test
