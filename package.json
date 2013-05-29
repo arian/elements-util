@@ -12,8 +12,8 @@
   },
   "license": "MIT",
   "dependencies": {
-    "prime": "*",
-    "elements": "0.0.7-alpha"
+    "prime": "0.1",
+    "elements": "0.1"
   },
   "devDependencies": {
     "mocha": "1.6",
