@@ -2,7 +2,7 @@
 
 var expect = require('expect.js')
 var $ = require('elements')
-var ready = require('elements/lib/domready')
+var ready = require('elements/domready')
 var event = require('../lib/event')
 
 var mouse = require('../lib/event/mouse')

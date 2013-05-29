@@ -4,7 +4,7 @@ var expect = require("expect.js")
 
 var behavior = require('../lib/behavior')
 var $ = require('elements')
-require('elements/lib/insertion')
+require('elements/insertion')
 
 describe("behavior", function(){
 
